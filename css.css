@@ -1,0 +1,112 @@
+body {
+	display: contents;
+	font-family: Verdana, Geneva, sans-serif;
+	overflow: hidden;
+}
+.nav {
+	position: fixed;
+	right: 0px;
+	height: 5%;
+	width: calc(100% - 233px);
+	background-color: #2c3e50;
+	display: table;
+}
+.nav > .link {
+	display: table-cell;
+	vertical-align: middle;
+}
+.nav > .link > a{
+	float: right;
+	color: #ecf0f1;
+	margin-left: 5%;
+	text-decoration: none;
+}
+.nav > .link > .firstLink{
+	margin-right: 2%;
+}
+.sidebar {
+	position: fixed;
+	height: 100%;
+	float: left;
+	text-align: center;
+	display: inline-block;
+	width: 233px;
+	background-color: #34495e;
+}
+.sidebar > .title {
+	font-size: 30px;
+	color : white;
+	font-weight: bold;
+}
+.sidebar > .link > hr {
+	border : 1px solid #1f2d3c;
+}
+.sidebar > .link > a {
+	color: #ecf0f1;
+	display: block;
+	text-decoration: none;
+}
+.sidebarLink {
+	margin-bottom: 9%;
+}
+.sidebarLinkLastElement {
+	margin-bottom: 5%;
+}
+.content {
+	background-color: grey;
+	position: absolute;
+	top: 5%;
+	width: calc(100% - 234px);
+	right: 0;
+	height: 95%;
+	overflow: auto;
+}
+.author {
+	color: #95a5a6;
+	font-size: 10px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+	.sidebar {
+		float: none;
+		width: 100%;
+		z-index: 2;
+		height: 7%;
+		top: 0;
+	}
+	.sidebar > .link > a {
+		color: #ecf0f1;
+		display: inline;
+		text-decoration: none;
+	}
+	.sidebar > .link > hr {
+		display: none;
+	}
+	.sidebar > .title {
+		font-size: 30px;
+		color : white;
+		font-weight: bold;
+		margin: 0;
+		padding: 0;
+	}
+	.nav {
+		height: 4%;
+		z-index: 2;
+		width: 100%;
+		text-align: center;
+		display: block;
+		top: 7%;
+	}
+	.nav > .link {
+		display: inline-flex;
+		text-align: center;
+	}
+	.author {
+		display: none;
+	}
+	.content {
+		width: 100%;
+		height: 88.8%;
+		top: 11.2%;
+	}
+}
